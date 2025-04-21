@@ -1,9 +1,7 @@
 name: React CI/CD
-
 on:
   push:
     branches: [master]
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
