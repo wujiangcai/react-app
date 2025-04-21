@@ -7,28 +7,32 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
+    <div className="app-container">
+      <div className="logo-container">
+        <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Welcome to Vite + React</h1>
       <div className="card">
+        <h2>Interactive Counter</h2>
+        <div className="counter-display">
+          <span>{count}</span>
+        </div>
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          Increment Count
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+        <p className="card-text">
+          Try editing <code>src/App.jsx</code> to test Hot Module Replacement
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Explore more about Vite and React by clicking on their logos above
       </p>
-    </>
+    </div>
   )
 }
 
